@@ -1,5 +1,7 @@
 const distube = require('../index.js');
 const { MessageEmbed } = require("discord.js");
+const { EMBED_COLOR } = require('../config.json');
+
 module.exports = {
     name: "join",
     aliases: ["j", "247", "24/7", "24x7","aaja","aja"],
