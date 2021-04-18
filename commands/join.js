@@ -1,6 +1,5 @@
 const distube = require('../index.js');
 const { MessageEmbed } = require("discord.js");
-const { EMBED_COLOR } = require('../config.json');
 
 module.exports = {
     name: "join",
@@ -10,18 +9,18 @@ module.exports = {
         const { channel } = message.member.voice;
 
         const novc = new MessageEmbed()
-        .setDescription(`${EMOJI_ERROR} You need to join a voice channel first!`)
-        .setColor(EMBED_COLOR);
+        .setDescription(`You need to join a voice channel first!`)
+        .setColor("YELLOW");
 
         const joinn = new MessageEmbed()
         .setDescription(":sez_music_correct: 24/7 mode is now **Enabled** in this server.")
-        .setColor(EMBED_COLOR);
+        .setColor("YELLOW");
 
         const serverQueue = message.client.queue.get(message.guild.id);
         if (!channel) return message.channel.send(novc).catch(console.error);
         const nosamechannel = new MessageEmbed()
-        .setDescription(`${:astroz_wrong:} You must be in the same channel as ${message.client.user}`)
-        .setColor(EMBED_COLOR);
+        .setDescription(` You must be in the same channel as ${message.client.user}`)
+        .setColor("YELLOW");
         message.channel.send(joinn)
         
 
@@ -29,7 +28,7 @@ module.exports = {
           return message.channel.send(nosamechannel).catch(console.error);          
 
             await message.member.voice.channel.join()
-                    return message.react(:astroz_correct:);
+  
         }
     }
 
