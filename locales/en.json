@@ -8,6 +8,11 @@
   "clips": {
     "description": "List all clips"
   },
+  "help": {
+    "description": "Display all commands and descriptions",
+    "embedTitle": "{botname} Help",
+    "embedDescription": "clip,clip,disconnect,h(help)Invite,join,loop,lyrics,np,feedback,pause,ping,play,playlist,pruning,queue,remove,resume,search,suffle,skip,skipto,stop,bugreport,24/7"
+  },
   "invite": {
     "description": "Send bot invite link"
   },
