@@ -12,16 +12,16 @@ module.exports = {
 
         const dcneedvc = new MessageEmbed()        
         .setDescription(":astroz_wrong: You need to join a voice channel which i'm in - to disconnect me!")
-        .setColor("YELLOW");
+        .setColor("RED");
 
         const dcembed = new MessageEmbed()
-        .setDescription(":astroz_correct: 24/7 mode is now **Disable** in this server.")
-        .setColor("YELLOW")
+        .setDescription(":right: 24/7 mode is now **Disable** in this server.")
+        .setColor("RED")
 
         
         const dccembed = new MessageEmbed()
         .setDescription(`You must be in the same channel as ${message.client.user}`)
-        .setColor("YELLOW")
+        .setColor("RED")
 
         if (!channel) return message.reply(dcneedvc).catch(console.error);
         if (serverQueue && channel !== message.guild.me.voice.channel)
