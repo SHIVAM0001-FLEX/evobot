@@ -1,8 +1,4 @@
 const { MessageEmbed } = require("discord.js");
-const { LOCALE } = require("../util/EvobotUtil");
-const i18n = require("i18n");
-
-i18n.setLocale(LOCALE);
 
 module.exports = {
   name: "help",
@@ -12,8 +8,8 @@ module.exports = {
     let commands = message.client.commands.array();
 
     let helpEmbed = new MessageEmbed()
-      .setTitle(i18n.__mf("help.embedTitle", { botname: message.client.user.username }))
-      .setDescription(i18n.__("clip,clips,help,invite,loop,lyrics,move,np,pause,ping,play,playlist,pruning,queue,remove,search,suffle,skip,skipto,stop,uptime,volume"))
+      .setTitle("help.embedTitle", { botname: message.client.user.username })
+      .setDescription("clip,clips,help,invite,loop,lyrics,move,np,pause,ping,play,playlist,pruning,queue,remove,search,suffle,skip,skipto,stop,uptime,volume")
       .setColor("EMBED_COLOR");
 
     commands.forEach((cmd) => {
