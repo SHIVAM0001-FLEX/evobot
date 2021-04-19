@@ -6,7 +6,7 @@ module.exports = {
     description: "submit a feedback",
     async execute(message, args) {
 
-        const fbChannel = "826342980960256031";
+        const fbChannel = "833542764666290188";
 
         const fb = args.join(" ");
         if(!fb){
@@ -14,13 +14,13 @@ module.exports = {
         }
 
         const embed = new MessageEmbed()
-            .setTitle("Astroz Music Feedback :astroz_correct:")
+            .setTitle("Cloudz Music Feedback :right:")
             .addField(`Author`, `\`${message.author.tag}\``)
             .addField(`Feedback`, "\`"+fb+"\`")
             .addField(`Member Id`, `\`${message.author.id}\``)
             .addField(`On the Server`, `\`${message.guild.name}\``)
             .addField("Server ID:", `\`${message.guild.id}\``)
-            .setColor("YELLOW")
+            .setColor("RED")
             .setTimestamp()
                     
         message.client.channels.cache.get(fbChannel).send(embed).then((msg) =>{
@@ -30,9 +30,9 @@ module.exports = {
 
 
         const successembed = new MessageEmbed()
-        .addField("Join Our Support Server", `Click Here To Join Our [Support Server](https://discord.gg/m7W2t3bsZj)`)
+        .addField("Join Our Support Server", `Click Here To Join Our [Support Server](https://discord.gg/5w7wgYCjwa)`)
         .setTitle("Success!")
-        .setColor("YELLOW")
+        .setColor("RED")
         .setDescription(` Your **Feedback** is submitted successfully!`)
 
         message.author.send(successembed)
