@@ -11,7 +11,7 @@ module.exports = {
         const serverQueue = message.client.queue.get(message.guild.id);
 
         const dcneedvc = new MessageEmbed()        
-        .setDescription(":astroz_wrong: You need to join a voice channel which i'm in - to disconnect me!")
+        .setDescription(":wrong: You need to join a voice channel which i'm in - to disconnect me!")
         .setColor("RED");
 
         const dcembed = new MessageEmbed()
@@ -20,7 +20,7 @@ module.exports = {
 
         
         const dccembed = new MessageEmbed()
-        .setDescription(`You must be in the same channel as ${message.client.user}`)
+        .setDescription(`:wrong: You must be in the same channel as ${message.client.user}`)
         .setColor("RED")
 
         if (!channel) return message.reply(dcneedvc).catch(console.error);
