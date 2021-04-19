@@ -10,7 +10,7 @@ module.exports = {
 
         const fb = args.join(" ");
         if(!fb){
-            return message.channel.send("Please enter a feedback!");
+            return message.channel.send(":wrong: Please enter a feedback!");
         }
 
         const embed = new MessageEmbed()
@@ -33,7 +33,7 @@ module.exports = {
         .addField("Join Our Support Server", `Click Here To Join Our [Support Server](https://discord.gg/5w7wgYCjwa)`)
         .setTitle("Success!")
         .setColor("RED")
-        .setDescription(` Your **Feedback** is submitted successfully!`)
+        .setDescription(`:right: Your **Feedback** is submitted successfully!`)
 
         message.author.send(successembed)
     }
