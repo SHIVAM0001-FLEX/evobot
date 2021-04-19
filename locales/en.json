@@ -8,11 +8,6 @@
   "clips": {
     "description": "List all clips"
   },
-  "help": {
-    "description": "Display all commands and descriptions",
-    "embedTitle": "{botname} Help",
-    "embedDescription": "List of all commands"
-  },
   "invite": {
     "description": "Send bot invite link"
   },
